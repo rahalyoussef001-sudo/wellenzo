@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overcome Task Paralysis &amp; Overwhelm — Wellenzo Focus Bundle</title>
+  <meta name="description" content="A dopamine-friendly, neuro-affirming daily system to bypass task paralysis, structure your workspace, and optimize focus.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Wellenzo ADHD Focus Bundle">
+  <meta property="og:description" content="A science-backed daily system to bypass task paralysis and build calm focus without burnout.">
+  <meta property="og:type" content="website">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Brand Colors */
+      --color-primary: #1A2F25;
+      --color-accent: #10B981;
+      --color-accent-light: rgba(16, 185, 129, 0.05);
+      --color-accent-mid: #0C9467;
+      --color-accent-dark: #096F4D;
+      
+      /* Base System */
+      --color-text: #2D3748;
+      --color-text-secondary: #4A5568;
+      --color-text-muted: #718096;
+      --color-bg: #FAFBF9;
+      --color-surface: #F3F6F4;
+      --color-border: #DDE5E0;
+      
+      --radius: 16px;
+      --radius-sm: 8px;
+      --shadow: 0 10px 30px rgba(26, 47, 37, 0.04);
+      --shadow-hover: 0 15px 40px rgba(26, 47, 37, 0.08);
+      --max-width: 960px;
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* --- Common Layout Components --- */
+    .section-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+
+    header {
+      border-bottom: 1px solid var(--color-border);
+      background: rgba(250, 251, 249, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--color-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--color-accent);
+      border-radius: 50%;
+    }
+
+    .header-cta {
+      display: inline-block;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .header-cta:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-1px);
+    }
+
+    /* --- Hero Section --- */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .hero-content {
+      text-align: left;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--color-accent-light);
+      color: var(--color-accent-mid);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(16, 185, 129, 0.15);
+    }
+
+    h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--color-primary);
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .cta-container {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(16, 185, 129, 0.35);
+    }
+
+    .hero-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .hero-price-strike {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: line-through;
+      margin-right: 0.5rem;
+    }
+
+    .guarantee-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    .guarantee-icon {
+      color: var(--color-accent);
+      font-weight: bold;
+    }
+
+    /* --- 3D Book Scene in Hero --- */
+    .hero-scene {
+      width: 280px;
+      height: 400px;
+      perspective: 1200px;
+      justify-self: center;
+    }
+
+    .book {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(-20deg) rotateX(10deg);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-scene:hover .book {
+      transform: rotateY(-5deg) rotateX(5deg) scale(1.02);
+    }
+
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 2px 8px 8px 2px;
+    }
+
+    .front {
+      background: var(--color-bg);
+      transform: translateZ(10px);
+      box-shadow: inset 4px 0 10px rgba(0,0,0,0.05);
+      border: 1px solid var(--color-border);
+      border-left: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 20px;
+      z-index: 10;
+    }
+
+    .front-brand {
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .front-decorator {
+      width: 40px;
+      height: 2px;
+      background: var(--color-accent);
+      margin-top: 0.5rem;
+    }
+
+    .front-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--color-primary);
+      letter-spacing: -0.03em;
+      margin-top: 1.5rem;
+    }
+
+    .front-subtitle {
+      font-size: 0.65rem;
+      color: var(--color-text-secondary);
+      line-height: 1.4;
+      max-width: 90%;
+    }
+
+    .front-art-container {
+      width: 100%;
+      height: 120px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: #FFFFFF;
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .front-art {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .front-author {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .spine {
+      width: 20px;
+      background: var(--color-primary);
+      transform: rotateY(-90deg) translateZ(10px);
+      left: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset -3px 0 5px rgba(0,0,0,0.3);
+    }
+
+    .spine-text {
+      color: #FFFFFF;
+      font-size: 0.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      white-space: nowrap;
+      transform: rotate(-90deg);
+    }
+
+    .right-thickness {
+      width: 18px;
+      background: #EBEFEF;
+      background-image: linear-gradient(90deg, #EBEFEF 0%, #FFFFFF 100%);
+      transform: rotateY(90deg) translateZ(270px);
+      box-shadow: inset 5px 0 10px rgba(0,0,0,0.05);
+    }
+
+    .bottom-thickness {
+      height: 18px;
+      background: #EBEFEF;
+      transform: rotateX(-90deg) translateZ(390px);
+    }
+
+    .shadow-3d {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      box-shadow: -15px 15px 30px rgba(26,47,37,0.2);
+      transform: translateZ(-15px);
+      border-radius: 8px;
+      z-index: 1;
+    }
+
+    /* --- Trust Bar --- */
+    .trust-bar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .trust-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--color-accent-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent-mid);
+      font-size: 0.8rem;
+    }
+
+    /* --- Problem Section --- */
+    .problem-section {
+      background: #FAFBF9;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .section-title-center {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-title-center h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .problem-text p {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .problem-quote {
+      background: var(--color-surface);
+      border-left: 4px solid var(--color-primary);
+      padding: 1.5rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-style: italic;
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    .problem-card {
+      background: rgba(236, 201, 75, 0.05);
+      border: 1px dashed #ECC94B;
+      padding: 2rem;
+      border-radius: var(--radius);
+    }
+
+    .problem-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #975A16;
+      margin-bottom: 1rem;
+    }
+
+    .problem-card li {
+      margin-bottom: 0.75rem;
+      list-style-type: none;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #744210;
+    }
+
+    .problem-card li::before {
+      content: "✕";
+      position: absolute;
+      left: 0;
+      color: #E53E3E;
+      font-weight: bold;
+    }
+
+    /* --- Solution / Bundle Grid --- */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .bento-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .bento-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .bento-card-full {
+      grid-column: span 2;
+    }
+
+    .bento-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .bento-tag {
+      display: inline-block;
+      background: var(--color-accent-light);
+      color: var(--color-accent-mid);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 30px;
+      margin-bottom: 1rem;
+    }
+
+    .bento-card h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .bento-card p {
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      margin-top: 0.5rem;
+    }
+
+    .bento-details {
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+      padding-top: 1.5rem;
+    }
+
+    .bento-details li {
+      list-style-type: none;
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+    }
+
+    .bento-details li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: bold;
+    }
+
+    /* --- Pricing Section --- */
+    .pricing-card {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      border-radius: var(--radius);
+      padding: 4rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(26, 47, 37, 0.15);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: 30px;
+      right: -40px;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.5rem 3rem;
+      transform: rotate(45deg);
+    }
+
+    .pricing-card h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card p.intro {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .price-large {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .price-strike {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: line-through;
+      margin-right: 0.75rem;
+    }
+
+    .pricing-card .cta-button {
+      background: #FFFFFF;
+      color: var(--color-primary);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .pricing-card .cta-button:hover {
+      background: var(--color-accent);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .pricing-meta {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    /* --- FAQ Section --- */
+    .faq-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+      padding: 1.2rem 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    details[open] {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow);
+    }
+
+    summary {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--color-accent);
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::after {
+      content: "−";
+      transform: rotate(90deg);
+    }
+
+    details p {
+      margin-top: 1rem;
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* --- Footer --- */
+    footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-primary);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links button {
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .footer-links button:hover {
+      color: #FFFFFF;
+    }
+
+    /* --- Modals CSS --- */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(26, 47, 37, 0.6);
+      backdrop-filter: blur(5px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-content {
+      background-color: #FFFFFF;
+      border-radius: var(--radius);
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      color: var(--color-text);
+      text-align: left;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+
+    .close-modal:hover {
+      color: var(--color-primary);
+    }
+
+    .modal h2 {
+      font-size: 1.8rem;
+      color: var(--color-primary);
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+    }
+
+    .modal h3 {
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .modal p {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    /* --- Responsive Breakpoints --- */
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+      .hero-content {
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.4rem;
+      }
+      .cta-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+      .bento-card-full {
+        grid-column: span 1;
+      }
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-bar">
+      <a href="#" class="logo">
+        <div class="logo-dot"></div>
+        <span>Wellenzo</span>
+      </a>
+      <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="header-cta">Get the Bundle</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section-container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="hero-tag">Focus Botanical System</span>
+        <h1>Quiet Focus Daily System</h1>
+        <p class="subtitle">
+          Overcome task freeze and manage cognitive exhaustion using a dopamine-friendly, undated hybrid organizer and science-backed stacks.
+        </p>
+        
+        <div class="cta-container">
+          <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="cta-button">Get the Focus Bundle</a>
+          <div class="hero-price">
+            <span class="hero-price-strike">$97</span>
+            <span>$47 USD</span>
+          </div>
+        </div>
+        
+        <div class="guarantee-tag">
+          <span class="guarantee-icon">✓</span>
+          <span>Stripe Secure Payment &amp; Instant Digital Access</span>
+        </div>
+      </div>
+
+      <!-- 3D CSS Book Mockup -->
+      <div class="hero-scene">
+        <div class="book">
+          <div class="shadow-3d"></div>
+          
+          <!-- Front Cover -->
+          <div class="face front">
+            <div class="front-top">
+              <span class="front-brand">Wellenzo</span>
+              <div class="front-decorator"></div>
+              <h2 class="front-title">Quiet Focus</h2>
+              <p class="front-subtitle">A Science-Backed, Neuro-Affirming Playbook to Overcome Task Paralysis</p>
+            </div>
+            
+            <div class="front-art-container">
+              <img class="front-art" src="../ebook en/assets/cover.png" alt="Quiet Focus Botanical Cover Art" />
+            </div>
+            
+            <p class="front-author">By Alex</p>
+          </div>
+          
+          <!-- Spine -->
+          <div class="face spine">
+            <div class="spine-text">Quiet Focus — Wellenzo</div>
+          </div>
+          
+          <!-- Thickness Pages -->
+          <div class="face right-thickness"></div>
+          <div class="face bottom-thickness"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <span>100% Neuro-affirming Layouts</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <span>Clinically Backed Supplement Stack</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <span>Lifetime Updates Included</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="problem-section">
+    <div class="section-container">
+      <div class="section-title-center">
+        <h2>Why Traditional Systems Fail Your ADHD Brain</h2>
+      </div>
+      
+      <div class="problem-grid">
+        <div class="problem-text">
+          <p>
+            Most productivity systems are designed for neurotypical brains. They assume you can force focus with rigid hours, strict calendar dates, and constant willpower.
+          </p>
+          <p>
+            For a brain with lower dopamine baseline, starting a routine task feels like a stress response. Your prefrontal cortex fails to register the future reward, your amygdala triggers a survival freeze, and you lock up.
+          </p>
+          <div class="problem-quote">
+            "The shame loop starts when you miss a day, stare at empty pages, and throw the planner in the drawer."
+          </div>
+        </div>
+        
+        <div class="problem-card">
+          <h3>The Graveyard of Planners</h3>
+          <ul>
+            <li>Rigid structures that trigger starting friction</li>
+            <li>White page guilt when you skip a week</li>
+            <li>Lack of clear visual starting protocols</li>
+            <li>Complex setups that take hours to build</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bento Solution Grid -->
+  <section class="section-container">
+    <div class="section-title-center">
+      <h2>The Wellenzo Focus Bundle</h2>
+      <p style="color: var(--color-text-secondary);">Four integrated pillars designed to act as your focus architecture.</p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- 60-Page Playbook -->
+      <div class="bento-card bento-card-full">
+        <div class="bento-header">
+          <span class="bento-tag">Pillar 1</span>
+          <h3>The 60-Page Quiet Focus Playbook</h3>
+          <p>A science-backed, neuro-affirming guide outlining executive dysfunction, biological resets, and workplace routines.</p>
+        </div>
+        <div class="bento-details">
+          <ul>
+            <li>Understand the chemistry behind your task paralysis and freeze states.</li>
+            <li>Region-neutral support strategies and clinical assessment preparation tips.</li>
+            <li>Step-by-step frameworks to restructure your workspace for high focus.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Planner -->
+      <div class="bento-card">
+        <div>
+          <span class="bento-tag">Pillar 2</span>
+          <h3>Interactive Daily Planner</h3>
+          <p>An undated daily hyperlinked planner designed to plan around your energy baseline, not strict calendar dates.</p>
+        </div>
+        <div class="bento-details">
+          <ul>
+            <li>Zero empty page guilt: miss a week, flip the page, start fresh.</li>
+            <li>Hyperlinked design optimized for iPad, tablets, or reMarkable.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Notion Dashboard -->
+      <div class="bento-card">
+        <div>
+          <span class="bento-tag">Pillar 3</span>
+          <h3>Focus Notion Dashboard</h3>
+          <p>A digital workspace featuring a quick-capture inbox, project manager, and digital Dopamine Menu.</p>
+        </div>
+        <div class="bento-details">
+          <ul>
+            <li>Mobile-friendly layout with widget compatibility.</li>
+            <li>Capture ideas in 3 seconds to avoid memory load.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Audiobook -->
+      <div class="bento-card bento-card-full">
+        <div class="bento-header">
+          <span class="bento-tag">Pillar 4</span>
+          <h3>Bite-Sized AI Audiobook</h3>
+          <p>The entire playbook narrated in bite-sized, high-quality audio tracks for active, auditory learning.</p>
+        </div>
+        <div class="bento-details">
+          <ul>
+            <li>Listen on the move to reset your system during chores.</li>
+            <li>Bite-sized tracks structured for short cognitive retention intervals.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Block -->
+  <section class="section-container" style="padding-top: 0;">
+    <div class="pricing-card">
+      <div class="pricing-badge">50% OFF</div>
+      <h2>Get the Quiet Focus Bundle Today</h2>
+      <p class="intro">
+        Build a daily system that works with your biology, quiets starting anxiety, and lets you focus shame-free.
+      </p>
+      
+      <div class="price-large">
+        <span class="price-strike">$97</span>$47 USD
+      </div>
+      
+      <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="cta-button">Instant Access to the Bundle</a>
+      
+      <div class="pricing-meta">
+        <span>✓ 30-Day Money Back Guarantee</span>
+        <span>✓ Secure Checkout via Stripe</span>
+        <span>✓ Lifetime Free Updates</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-container" style="border-top: 1px solid var(--color-border);">
+    <div class="section-title-center">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-container">
+      <details>
+        <summary>How is this planner different from the 10 others I abandoned?</summary>
+        <p>
+          Traditional planners are dated, meaning if you miss a day, a week, or a month, you are met with empty white space that triggers guilt. The Wellenzo planner is completely undated. If you skip a week, you just turn the page and continue whenever your energy allows—no empty spaces, no shame. Additionally, it structures your day around energy blocks and dopamine appetizers rather than rigid hours.
+        </p>
+      </details>
+      <details>
+        <summary>Do the supplement stacks and concentration guidelines actually work?</summary>
+        <p>
+          We do not promote magic solutions or placebo stacks. The supplement stacking section inside the Playbook focuses exclusively on ingredients and synergies that have been verified in peer-reviewed clinical studies. We analyze stacks like the L-Theanine + Caffeine synergy (for cognitive task speed) and Magnesium L-Threonate (which bypasses the blood-brain barrier for cell energy), detailing accurate dosages, potential side-effects, and clinical limits.
+        </p>
+      </details>
+      <details>
+        <summary>Can I access the bundle on my mobile phone?</summary>
+        <p>
+          Yes. While the PDF planner is hyper-linked and optimized for large screens like iPads and tablets, the Notion Dashboard is built with mobile-responsive templates that fit perfectly on mobile screens. You can add the Notion page to your phone's home screen as a widget, letting you capture thoughts and access your digital Dopamine Menu in less than 3 seconds.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2026 Wellenzo. All rights reserved. | Backed by clinical science.</p>
+      <div class="footer-links">
+        <button onclick="openModal('privacy-modal')">Privacy Policy</button>
+        <button onclick="openModal('terms-modal')">Terms of Service</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Legal Modals -->
+  <!-- Privacy Modal -->
+  <div id="privacy-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('privacy-modal')">×</button>
+      <h2>Privacy Policy</h2>
+      <p>Last updated: June 25, 2026</p>
+      <p>Wellenzo is committed to protecting your personal data. This policy outlines how we handle information collected during your visit or purchase.</p>
+      
+      <h3>1. Data We Collect</h3>
+      <p>We collect email addresses when you subscribe to our newsletter or purchase products. Payment info is processed securely via Stripe; we do not store credit card details on our servers.</p>
+      
+      <h3>2. How We Use Data</h3>
+      <p>To deliver your digital product download links, send billing receipts, and dispatch email updates or focus newsletters. You can opt out of any marketing emails at any time using the unsubscribe link.</p>
+      
+      <h3>3. Cookies</h3>
+      <p>We use simple cookies to optimize site display and analyze traffic. No trackers or third-party cookies are set without your consent.</p>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="terms-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('terms-modal')">×</button>
+      <h2>Terms of Service</h2>
+      <p>Last updated: June 25, 2026</p>
+      <p>Welcome to Wellenzo. By purchasing or using our digital files, you agree to comply with these terms.</p>
+      
+      <h3>1. Digital Downloads</h3>
+      <p>All sales are final once download links are accessed. However, we provide a 30-day money-back guarantee if the product does not meet your expectations.</p>
+      
+      <h3>2. License Usage</h3>
+      <p>Purchasing provides a single-user license for personal use. Files may not be shared, resold, distributed, or repurposed without written consent from Wellenzo.</p>
+      
+      <h3>3. Disclaimer</h3>
+      <p>All information, including focus planner layouts and supplement guidelines, is for educational and organization purposes. It does not replace medical advice from qualified healthcare professionals.</p>
+    </div>
+  </div>
+
+  <!-- Modal Script -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal if clicked outside
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+  </script>
+</body>
+</html>

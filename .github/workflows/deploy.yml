@@ -1,0 +1,36 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy website
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+
+    - name: 📂 Sync files to Hostinger
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+        username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+        password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+        local-dir: ./
+        server-dir: public_html/
+        # Exclude development files, node_modules, and git config from being uploaded
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.agent/**
+          **/.agents/**
+          **/package*.json
+          **/scripts/**
+          **/business-profile.md
+          **/task.md
+          **/implementation_plan.md
+          **/walkthrough.md

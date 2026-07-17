@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "puppeteer-core": "^25.2.1"
+  },
+  "scripts": {
+    "export:pdf": "node scripts/export-pdf.js"
+  }
+}
