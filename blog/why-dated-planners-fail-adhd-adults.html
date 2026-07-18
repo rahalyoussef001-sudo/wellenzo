@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Dated Planners Fail ADHD Adults (And the Undated Solution) — Wellenzo Blog</title>
+  <meta name="description" content="Discover why standard calendars and dated planners trigger task paralysis in ADHD brains, and how to transition to energy-based, undated planning.">
+  <link rel="canonical" href="https://wellenzo.com/blog/why-dated-planners-fail-adhd-adults.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Why Dated Planners Fail ADHD Adults — Wellenzo Blog">
+  <meta property="og:description" content="Discover the neuroscience behind task freeze and the guilt loop triggered by traditional calendar-based planners.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wellenzo.com/blog/why-dated-planners-fail-adhd-adults.html">
+  <meta property="og:image" content="https://wellenzo.com/ebook%20en/assets/calm_workspace.png">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why Dated Planners Fail ADHD Adults (And the Undated Solution)",
+    "image": "https://wellenzo.com/ebook%20en/assets/calm_workspace.png",
+    "datePublished": "2026-06-27T08:00:00+01:00",
+    "author": {
+      "@type": "Person",
+      "name": "Alex",
+      "jobTitle": "Neurodiversity Content Creator"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Wellenzo",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wellenzo.com/favicon.ico"
+      }
+    },
+    "description": "An analysis of why traditional hour-by-hour dated planners trigger the ADHD shame loop, and how to plan based on energy levels."
+  }
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Brand Core Colors */
+      --color-primary: #1A2F25;        /* Deep Forest Green */
+      --color-accent: #10B981;         /* Fresh Sage/Mint Green */
+      --color-accent-light: rgba(16, 185, 129, 0.05);
+      --color-accent-mid: #0C9467;
+      --color-accent-dark: #096F4D;
+      
+      /* Base System Colors */
+      --color-text: #2D3748;
+      --color-text-secondary: #4A5568;
+      --color-text-muted: #718096;
+      --color-bg: #FAFBF9;             /* Warm Botanical White */
+      --color-card-bg: #FFFFFF;
+      --color-surface: #F3F6F4;
+      --color-border: #DDE5E0;
+      
+      /* Spacing & Radia */
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --max-width: 960px;
+      --article-width: 680px;
+      
+      /* Shadows */
+      --shadow-sm: 0 4px 12px rgba(26, 47, 37, 0.02);
+      --shadow-md: 0 10px 30px rgba(26, 47, 37, 0.04);
+      --shadow-lg: 0 15px 40px rgba(26, 47, 37, 0.08);
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+      background-color: var(--color-bg);
+      background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: var(--color-text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* Ambient Glow Spots */
+    .ambient-glow-1 {
+      position: absolute;
+      top: 5%;
+      left: 15%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .ambient-glow-2 {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(100px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1.5rem;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 1000;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 1.5rem;
+    }
+
+    /* --- Common Layout Components --- */
+    .section-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+      position: relative;
+    }
+
+    body > header {
+      border-bottom: 1px solid var(--color-border);
+      background: rgba(245, 242, 235, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--color-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--color-accent);
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-primary);
+    }
+
+    .header-cta {
+      display: inline-block;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      transition: background-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .header-cta:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-1px);
+    }
+
+    /* --- Article Wrapper --- */
+    .article-wrapper {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .article-header {
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+
+    .article-tag-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+
+    .article-tag {
+      background: var(--color-accent-light);
+      color: var(--color-accent-mid);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      border: 1px solid rgba(16, 185, 129, 0.1);
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--color-primary);
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    .lead-paragraph {
+      font-size: 1.25rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .featured-image-container {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .featured-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* --- Article Content Typography --- */
+    .article-body h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.02em;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.5rem;
+    }
+
+    .article-body h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .article-body p {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body ul, .article-body ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      color: var(--color-text-secondary);
+      font-size: 1.05rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.5rem;
+    }
+
+    .article-body strong {
+      color: var(--color-primary);
+    }
+
+    /* --- Blockquotes & Callouts --- */
+    .quote-box {
+      background: var(--color-surface);
+      border-left: 4px solid var(--color-accent);
+      padding: 1.5rem 2rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      margin: 2rem 0;
+      font-weight: 500;
+    }
+
+    /* --- Interactive CTA Box --- */
+    .cta-card {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      margin: 3.5rem 0;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cta-card-badge {
+      display: inline-block;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 1.2rem;
+    }
+
+    .cta-card h4 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .cta-card p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-card-button {
+      display: inline-block;
+      background: #FFFFFF;
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .cta-card-button:hover {
+      background: var(--color-accent);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .cta-card-meta {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 1rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-primary);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links button, .footer-links a {
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links button:hover, .footer-links a:hover {
+      color: #FFFFFF;
+    }
+
+    /* --- Modals CSS --- */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(26, 47, 37, 0.6);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-content {
+      background-color: var(--color-card-bg);
+      border-radius: var(--radius-lg);
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      color: var(--color-text);
+      text-align: left;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+      transition: color 0.2s ease;
+    }
+
+    .close-modal:hover {
+      color: var(--color-primary);
+    }
+
+    .modal h2 {
+      font-size: 1.8rem;
+      color: var(--color-primary);
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+    }
+
+    .modal h3 {
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .modal p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .article-wrapper {
+        padding: 2rem 1.5rem;
+      }
+      .cta-card {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-bar">
+      <a href="../" class="logo">
+        <div class="logo-dot"></div>
+        <span>Wellenzo</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../#features" class="nav-link">Pillars</a>
+        <a href="../#pricing" class="nav-link">Pricing</a>
+        <a href="../#faq" class="nav-link">FAQ</a>
+        <a href="index.html" class="nav-link active">Blog</a>
+      </nav>
+      <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="header-cta">Get the Bundle</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="article-wrapper">
+      <!-- Article Header -->
+      <header class="article-header">
+        <div class="article-tag-row">
+          <span class="article-tag">Organization</span>
+          <span class="article-meta">6 Min Read • Published June 27, 2026</span>
+        </div>
+        <h1>Why Dated Planners Fail ADHD Adults (And the Undated Solution)</h1>
+        <p class="lead-paragraph">
+          If you have a drawer filled with ten half-empty organizers, you aren’t lazy. Standard planners fail because they are built around a neurotypical assumption: that your executive function baseline is identical every single day.
+        </p>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="featured-image-container">
+        <img class="featured-image" src="../ebook%20en/assets/calm_workspace.png" alt="Workspace desk with a tablet displaying a clean planner layout" width="680" height="450" />
+      </div>
+
+      <!-- Article Body -->
+      <div class="article-body">
+        <p>
+          It is a familiar cycle. You feel a sudden surge of motivation, visit a stationery shop or browse online, and purchase a beautiful, structured daily organizer. You fill in the first three days with perfect, hour-by-hour schedules.
+        </p>
+        <p>
+          Then, Tuesday gets overwhelming. An unexpected task derails your afternoon, or you wake up with zero cognitive energy. You miss a day. 
+        </p>
+        <p>
+          When you open the book on Thursday, you are met with two blank, dated pages staring back at you. In a neurotypical brain, this is a minor gap. In an ADHD brain, these empty pages act as a physical monument to failure. They trigger a mild stress response, starting anxiety creeps in, and you slide the planner into your desk drawer, never to open it again.
+        </p>
+
+        <div class="quote-box">
+          “The empty pages in a dated planner are not just blank paper; they are visual triggers of a shame loop.”
+        </div>
+
+        <h2>The Biology of Planning Friction</h2>
+        <p>
+          Traditional calendars are built around rigid timelines. They assume that executive function—the ability to initiate tasks, filter distractions, and manage time—is a constant resource. 
+        </p>
+        <p>
+          However, clinical neuro-science shows that the ADHD brain experiences significant daily fluctuations in dopamine levels. Dopamine is the neurotransmitter responsible for task anticipation and initiation. When dopamine baseline is low, starting a routing administrative task feels physically exhausting because the prefrontal cortex fails to register the future reward.
+        </p>
+        <p>
+          When you force an ADHD brain into a strict, hour-by-hour schedule on a low-dopamine day, the amygdala (the brain's emotional threat center) interprets the massive list of structured demands as an attack. This triggers a survival freeze, leading directly to <strong>task paralysis</strong>. You end up sitting at your desk for hours, staring at your screen, unable to start.
+        </p>
+
+        <h2>The Three Core Flaws of Traditional Planners</h2>
+        <p>
+          Understanding why standard systems fail is the first step to building a system that works with your biology, rather than against it.
+        </p>
+        
+        <h3>1. The Tyranny of the Calendar Date</h3>
+        <p>
+          Dated planners operate on a strict chronological mandate: use me today, or waste me. If you experience cognitive fatigue or burnout and take a three-day break, those pages are lost forever. The planner becomes a direct ledger of your inconsistencies, accumulating guilt with every skipped block.
+        </p>
+
+        <h3>2. Hour-by-Hour Micro-Scheduling</h3>
+        <p>
+          ADHD brains struggle with "time blindness"—the inability to accurately gauge how long a task will take. Attempting to schedule your day in rigid 30-minute intervals is a recipe for immediate derailment. The moment one block runs over by ten minutes, the entire day's structure collapses, causing starting paralysis for the remaining tasks.
+        </p>
+
+        <h3>3. Lack of Visual Starting Protocols</h3>
+        <p>
+          Traditional to-do lists are linear. They present tasks without categorizing them by cognitive weight. Faced with a list of ten equal items, the brain gets overwhelmed trying to decide where to start, resulting in analysis paralysis.
+        </p>
+
+        <!-- CTA Box Pitching the Bundle -->
+        <div class="cta-card">
+          <span class="cta-card-badge">ADHD Focus Architecture</span>
+          <h4>Bypass Task Paralysis with the Wellenzo Focus Bundle</h4>
+          <p>
+            Stop fighting your brain. Access our complete, undated planner system, Notion interactive dashboards, and the 60-page science-backed Quiet Focus Playbook designed specifically for neurodivergent minds.
+          </p>
+          <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="cta-card-button">Get the Bundle for $47 USD</a>
+          <div class="cta-card-meta">
+            <span>✓ Lifetime Free Updates</span>
+            <span>✓ 30-Day Money-Back Guarantee</span>
+          </div>
+        </div>
+
+        <h2>The Solution: Energy-Based, Undated Planning</h2>
+        <p>
+          To build a daily routine that lasts, you must remove the friction of shame. This requires moving away from chronological planning and transitioning to a hybrid, energy-based system.
+        </p>
+        <ul>
+          <li><strong>The Zero-Guilt Undated Format:</strong> By using a completely undated layout, your planner has no memory. If you take a week off to recover from a project sprint, you simply turn the page and write the current date. No empty sheets, no wasted pages, and zero guilt.</li>
+          <li><strong>Energy-Based Blocks:</strong> Instead of scheduling tasks by hours, categorize them by the level of cognitive energy they require. Group your tasks into <em>High-Focus Sprints</em> (requiring deep prefrontal cortex activity) and <em>Low-Friction Routine</em> (tasks that can be executed during afternoon brain fog).</li>
+          <li><strong>Dopamine Menu Integration:</strong> Never start a high-focus task cold. Use a "Dopamine Menu" to select a 5-minute cognitive appetizer (like a light physical stretch or listening to a specific track) to stimulate dopamine baseline before beginning deep focus work.</li>
+        </ul>
+        <p>
+          By restructuring your planning system around your biological baseline rather than calendar dates, you remove the starting friction that triggers task freeze. You stop fighting your brain, bypass the shame spiral, and unlock calm, sustainable focus.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2026 Wellenzo. All rights reserved. | Backed by clinical science.</p>
+      <div class="footer-links">
+        <a href="../">Home</a>
+        <a href="index.html">Blog Index</a>
+        <button id="btn-privacy" onclick="openModal('privacy-modal')">Privacy Policy</button>
+        <button id="btn-terms" onclick="openModal('terms-modal')">Terms of Service</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Legal Modals -->
+  <!-- Privacy Modal -->
+  <div id="privacy-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-heading">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal" onclick="closeModal('privacy-modal')">×</button>
+      <h2 id="privacy-heading">Privacy Policy</h2>
+      <p style="font-weight: 500; margin-bottom: 1.5rem;">Last updated: June 25, 2026</p>
+      <p>Wellenzo is committed to protecting your personal data. This policy outlines how we handle information collected during your visit or purchase.</p>
+      <h3>1. Data We Collect</h3>
+      <p>We collect email addresses when you subscribe to our newsletter or purchase products. Payment info is processed securely via Stripe; we do not store credit card details on our servers.</p>
+      <h3>2. How We Use Data</h3>
+      <p>We use your data to deliver the digital bundle products, process transactions, and send infrequent updates about your files. We never sell your personal data to third parties.</p>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="terms-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="terms-heading">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal" onclick="closeModal('terms-modal')">×</button>
+      <h2 id="terms-heading">Terms of Service</h2>
+      <p style="font-weight: 500; margin-bottom: 1.5rem;">Last updated: June 25, 2026</p>
+      <p>By using Wellenzo's website and purchasing the Focus Bundle, you agree to these terms.</p>
+      <h3>1. Digital Product License</h3>
+      <p>Purchased planners, Notion templates, and guides are for personal use only. Sharing, reselling, or reproducing these files is strictly prohibited.</p>
+      <h3>2. Medical Disclaimer</h3>
+      <p>Materials provided on Wellenzo are for educational and informational purposes only and do not substitute for professional medical advice, diagnosis, or therapy.</p>
+    </div>
+  </div>
+
+  <script>
+    // Modal controls
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close modal
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  </script>
+</body>
+</html>

@@ -146,7 +146,7 @@
       position: relative;
     }
 
-    header {
+    body > header {
       border-bottom: 1px solid var(--color-border);
       background: rgba(245, 242, 235, 0.75);
       backdrop-filter: blur(16px);
@@ -163,6 +163,24 @@
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 1.2rem 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-primary);
     }
 
     .logo {
@@ -1003,6 +1021,9 @@
       .dopamine-builder-card {
         padding: 1.5rem;
       }
+      .nav-links {
+        display: none;
+      }
     }
 
     /* --- Footer --- */
@@ -1029,7 +1050,7 @@
       gap: 1.5rem;
     }
 
-    .footer-links button {
+    .footer-links button, .footer-links a {
       background: none;
       border: none;
       color: rgba(255, 255, 255, 0.6);
@@ -1040,7 +1061,7 @@
       transition: color 0.2s ease;
     }
 
-    .footer-links button:hover {
+    .footer-links button:hover, .footer-links a:hover {
       color: #FFFFFF;
     }
 
@@ -1168,6 +1189,12 @@
         <div class="logo-dot"></div>
         <span>Wellenzo</span>
       </a>
+      <nav class="nav-links">
+        <a href="#features" class="nav-link">Pillars</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="blog/" class="nav-link">Blog</a>
+      </nav>
       <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="header-cta">Get the Bundle</a>
     </div>
   </header>
@@ -1302,7 +1329,7 @@
     </section>
 
     <!-- Bento Solution Grid -->
-    <section class="section-container">
+    <section id="features" class="section-container">
       <div class="section-title-center">
         <h2>The Wellenzo Focus Bundle</h2>
         <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">Four integrated pillars designed to act as your focus architecture.</p>
@@ -1504,7 +1531,7 @@
     </section>
 
     <!-- Pricing Block -->
-    <section class="section-container" style="padding-top: 0;">
+    <section id="pricing" class="section-container" style="padding-top: 0;">
       <div class="pricing-card">
         <div class="pricing-badge">50% OFF</div>
         <h2>Get the Quiet Focus Bundle Today</h2>
@@ -1537,7 +1564,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section-container" style="border-top: 1px solid var(--color-border);">
+    <section id="faq" class="section-container" style="border-top: 1px solid var(--color-border);">
       <div class="section-title-center">
         <h2>Frequently Asked Questions</h2>
       </div>
@@ -1579,6 +1606,7 @@
     <div class="footer-content">
       <p>© 2026 Wellenzo. All rights reserved. | Backed by clinical science.</p>
       <div class="footer-links">
+        <a href="blog/">Blog</a>
         <button id="btn-privacy" onclick="openModal('privacy-modal')">Privacy Policy</button>
         <button id="btn-terms" onclick="openModal('terms-modal')">Terms of Service</button>
       </div>
