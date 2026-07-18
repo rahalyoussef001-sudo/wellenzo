@@ -5,6 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Overcome Task Paralysis &amp; Overwhelm — Wellenzo Focus Bundle</title>
   <meta name="description" content="A dopamine-friendly, neuro-affirming daily system to bypass task paralysis, structure your workspace, and optimize focus.">
+  <link rel="canonical" href="https://wellenzo.com/">
+
+  <!-- Product & Offer Schema Markup (SEO rich snippets) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Wellenzo ADHD Focus Bundle",
+    "image": "https://wellenzo.com/ebook%20en/assets/cover.png",
+    "description": "A dopamine-friendly, neuro-affirming daily system to bypass task paralysis, structure your workspace, and optimize focus.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Wellenzo"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://wellenzo.com/",
+      "priceCurrency": "USD",
+      "price": "47.00",
+      "priceValidUntil": "2027-12-31",
+      "availability": "https://schema.org/InStock",
+      "valueAddedTaxIncluded": "true"
+    }
+  }
+  </script>
   
   <!-- Open Graph -->
   <meta property="og:title" content="Wellenzo ADHD Focus Bundle">
@@ -57,6 +82,23 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       position: relative;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1.5rem;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 1000;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 1.5rem;
     }
 
     /* Ambient Glow Spots */
@@ -150,7 +192,7 @@
       padding: 0.6rem 1.5rem;
       border-radius: 30px;
       font-size: 0.9rem;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: background-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
     }
 
@@ -220,7 +262,7 @@
       padding: 1rem 2.5rem;
       border-radius: 50px;
       box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: background-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
     }
 
@@ -530,7 +572,7 @@
       border-radius: var(--radius-lg);
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -733,7 +775,7 @@
       border-radius: var(--radius-md);
       margin-bottom: 1rem;
       padding: 1.2rem 1.5rem;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
     details[open] {
@@ -750,8 +792,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      outline: none;
       user-select: none;
+    }
+
+    summary:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 4px;
+      border-radius: var(--radius-sm);
     }
 
     summary::-webkit-details-marker {
@@ -783,7 +830,7 @@
       box-shadow: var(--shadow-md);
       position: relative;
       overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .dopamine-builder-card:hover {
@@ -855,7 +902,7 @@
       font-weight: 500;
       color: var(--color-text-secondary);
       cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
     }
     
     .dopamine-opt:hover {
@@ -1109,6 +1156,7 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="ambient-glow-1"></div>
   <div class="ambient-glow-2"></div>
   <div class="ambient-glow-3"></div>
@@ -1125,7 +1173,7 @@
   </header>
 
   <!-- Hero Section -->
-  <main>
+  <main id="main-content">
     <section class="section-container" style="padding-top: 2rem; padding-bottom: 4rem;">
       <div class="hero-grid">
         <div class="hero-content">
@@ -1146,7 +1194,7 @@
           <div class="guarantee-tag">
             <span class="guarantee-icon">
               <!-- Inline Check Icon -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </span>
             <span>Stripe Secure Payment &amp; Instant Digital Access</span>
           </div>
@@ -1167,7 +1215,7 @@
               </div>
               
               <div class="front-art-container">
-                <img class="front-art" src="ebook%20en/assets/cover.png" alt="Quiet Focus Botanical Cover Art" />
+                <img class="front-art" src="ebook%20en/assets/cover.png" alt="Quiet Focus Botanical Cover Art" width="300" height="420" fetchpriority="high" />
               </div>
               
               <p class="front-author">By Alex</p>
@@ -1189,19 +1237,19 @@
       <div class="trust-bar">
         <div class="trust-item">
           <div class="trust-icon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <span>100% Neuro-affirming Layouts</span>
         </div>
         <div class="trust-item">
           <div class="trust-icon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <span>Clinically Backed Supplement Stack</span>
         </div>
         <div class="trust-item">
           <div class="trust-icon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <span>Lifetime Updates Included</span>
         </div>
@@ -1224,7 +1272,7 @@
               For a brain with lower dopamine baseline, starting a routine task feels like a stress response. Your prefrontal cortex fails to register the future reward, your amygdala triggers a survival freeze, and you lock up.
             </p>
             <div class="problem-quote">
-              "The shame loop starts when you miss a day, stare at empty pages, and throw the planner in the drawer."
+              “The shame loop starts when you miss a day, stare at empty pages, and throw the planner in the drawer.”
             </div>
           </div>
           
@@ -1232,19 +1280,19 @@
             <h3>The Graveyard of Planners</h3>
             <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
               <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 Rigid structures that trigger starting friction
               </li>
               <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 White page guilt when you skip a week
               </li>
               <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 Lack of clear visual starting protocols
               </li>
               <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 Complex setups that take hours to build
               </li>
             </ul>
@@ -1270,22 +1318,22 @@
             <div class="bento-details">
               <ul>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Understand the chemistry behind your task paralysis and freeze states.
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Region-neutral support strategies and clinical assessment preparation.
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Step-by-step frameworks to restructure your workspace for high focus.
                 </li>
               </ul>
             </div>
           </div>
           <div class="bento-image-container">
-            <img class="bento-image" src="ebook%20en/assets/chaos_to_focus.png" alt="Playbook Chaos to Focus illustration" />
+            <img class="bento-image" src="ebook%20en/assets/chaos_to_focus.png" alt="Playbook Chaos to Focus illustration" width="600" height="400" loading="lazy" />
           </div>
         </div>
 
@@ -1298,18 +1346,18 @@
             <div class="bento-details">
               <ul style="margin-bottom: 1.5rem;">
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Zero empty page guilt: miss a week, flip the page, start fresh.
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Hyperlinked design optimized for iPad, tablets, or reMarkable.
                 </li>
               </ul>
             </div>
           </div>
           <div class="bento-image-container">
-            <img class="bento-image" src="ebook%20en/assets/calm_workspace.png" alt="Daily Planner dashboard view" />
+            <img class="bento-image" src="ebook%20en/assets/calm_workspace.png" alt="Daily Planner dashboard view" width="600" height="400" loading="lazy" />
           </div>
         </div>
 
@@ -1322,18 +1370,18 @@
             <div class="bento-details">
               <ul style="margin-bottom: 1.5rem;">
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Mobile-friendly layout with widget compatibility.
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Capture ideas in 3 seconds to avoid memory load.
                 </li>
               </ul>
             </div>
           </div>
           <div class="bento-image-container">
-            <img class="bento-image" src="ebook%20en/assets/dopamine_diner.png" alt="Notion Dopamine Menu illustration" />
+            <img class="bento-image" src="ebook%20en/assets/dopamine_diner.png" alt="Notion Dopamine Menu illustration" width="600" height="400" loading="lazy" />
           </div>
         </div>
 
@@ -1346,18 +1394,18 @@
             <div class="bento-details">
               <ul>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Listen on the move to reset your system during chores.
                 </li>
                 <li>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   Bite-sized tracks structured for short cognitive retention intervals.
                 </li>
               </ul>
             </div>
           </div>
           <div class="bento-image-container">
-            <img class="bento-image" src="ebook%20en/assets/botanical_science.png" alt="Audiobook Botanical Science preview" />
+            <img class="bento-image" src="ebook%20en/assets/botanical_science.png" alt="Audiobook Botanical Science preview" width="600" height="400" loading="lazy" />
           </div>
         </div>
       </div>
@@ -1370,7 +1418,7 @@
           <span class="bento-tag">Interactive Sandbox</span>
           <h2>Build Your ADHD Dopamine Menu</h2>
           <p>
-            Standard to-do lists trigger starting anxiety because they feel like orders. A <strong>Dopamine Menu</strong> (or "Dopamenu") categorizes tasks by effort and reward, allowing you to choose a friction-free starter to boot up your prefrontal cortex. Try styling your menu below:
+            Standard to-do lists trigger starting anxiety because they feel like orders. A <strong>Dopamine Menu</strong> (or “Dopamenu”) categorizes tasks by effort and reward, allowing you to choose a friction-free starter to boot up your prefrontal cortex. Try styling your menu below:
           </p>
         </div>
         
@@ -1473,15 +1521,15 @@
         
         <div class="pricing-meta">
           <div class="pricing-meta-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             <span>30-Day Money Back Guarantee</span>
           </div>
           <div class="pricing-meta-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             <span>Secure Checkout via Stripe</span>
           </div>
           <div class="pricing-meta-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             <span>Lifetime Free Updates</span>
           </div>
         </div>
@@ -1498,7 +1546,7 @@
         <details>
           <summary>
             <span>How is this planner different from the 10 others I abandoned?</span>
-            <svg class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <svg aria-hidden="true" class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
           </summary>
           <p>
             Traditional planners are dated, meaning if you miss a day, a week, or a month, you are met with empty white space that triggers guilt. The Wellenzo planner is completely undated. If you skip a week, you just turn the page and continue whenever your energy allows—no empty spaces, no shame. Additionally, it structures your day around energy blocks and dopamine appetizers rather than rigid hours.
@@ -1507,7 +1555,7 @@
         <details>
           <summary>
             <span>Do the supplement stacks and concentration guidelines actually work?</span>
-            <svg class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <svg aria-hidden="true" class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
           </summary>
           <p>
             We do not promote magic solutions or placebo stacks. The supplement stacking section inside the Playbook focuses exclusively on ingredients and synergies that have been verified in peer-reviewed clinical studies. We analyze stacks like the L-Theanine + Caffeine synergy (for cognitive task speed) and Magnesium L-Threonate (which bypasses the blood-brain barrier for cell energy), detailing accurate dosages, potential side-effects, and clinical limits.
@@ -1516,7 +1564,7 @@
         <details>
           <summary>
             <span>Can I access the bundle on my mobile phone?</span>
-            <svg class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <svg aria-hidden="true" class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
           </summary>
           <p>
             Yes. While the PDF planner is hyper-linked and optimized for large screens like iPads and tablets, the Notion Dashboard is built with mobile-responsive templates that fit perfectly on mobile screens. You can add the Notion page to your phone's home screen as a widget, letting you capture thoughts and access your digital Dopamine Menu in less than 3 seconds.
