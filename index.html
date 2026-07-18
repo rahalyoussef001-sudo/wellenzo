@@ -1136,6 +1136,292 @@
       line-height: 1.6;
     }
 
+    /* --- Reorganized Homepage CSS Layouts --- */
+    .problem-selection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .problem-selection-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+
+    .problem-selection-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .problem-card-badge {
+      display: inline-block;
+      background: var(--color-accent-light);
+      color: var(--color-accent-mid);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      width: fit-content;
+      border: 1px solid rgba(16, 185, 129, 0.1);
+    }
+
+    .problem-selection-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .problem-selection-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    .problem-card-link {
+      font-weight: 700;
+      color: var(--color-accent-mid);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-top: auto;
+      transition: color 0.2s ease;
+    }
+
+    .problem-card-link:hover {
+      color: var(--color-accent-dark);
+    }
+
+    /* Section 2: Guides Row */
+    .guides-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .guide-row-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+
+    .guide-row-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .guide-card-image-wrapper {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .guide-card-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .guide-row-card:hover .guide-card-image-wrapper img {
+      transform: scale(1.03);
+    }
+
+    .guide-card-content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .guide-card-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+    }
+
+    .guide-card-content h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .guide-card-content p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Section 3: Shelf Section */
+    .shelf-row {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .shelf-book {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .shelf-book-cover {
+      width: 140px;
+      height: 200px;
+      border-radius: 2px 8px 8px 2px;
+      padding: 1.8rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: left;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .shelf-book:hover .shelf-book-cover {
+      transform: translateY(-4px) rotate(-1deg);
+    }
+
+    .shelf-book-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Section 4: Tools Grid */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tool-grid-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tool-grid-card:hover {
+      border-color: rgba(16, 185, 129, 0.2);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tool-card-icon {
+      font-size: 1.5rem;
+    }
+
+    .tool-grid-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .tool-grid-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Section 6: Notes/Blog Grid */
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .note-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+
+    .note-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .note-card.muted {
+      opacity: 0.75;
+      border-style: dashed;
+      background: rgba(255,255,255,0.4);
+    }
+
+    .note-card-meta {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+    }
+
+    .note-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .note-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    .note-card-link {
+      font-weight: 700;
+      color: var(--color-accent-mid);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-top: auto;
+      transition: color 0.2s ease;
+    }
+
+    .note-card-link:hover {
+      color: var(--color-accent-dark);
+    }
+
     /* --- Responsive Breakpoints --- */
     @media (max-width: 768px) {
       .hero-grid {
@@ -1173,6 +1459,26 @@
         flex-direction: column;
         text-align: center;
       }
+      .problem-selection-grid,
+      .guides-row,
+      .tools-grid,
+      .notes-grid {
+        grid-template-columns: 1fr;
+      }
+      .shelf-row {
+        gap: 1.5rem;
+      }
+      .split-avoid-section .section-container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+      }
+      .start-here-callout {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 2rem 1.5rem !important;
+      }
     }
   </style>
 </head>
@@ -1204,26 +1510,19 @@
     <section class="section-container" style="padding-top: 2rem; padding-bottom: 4rem;">
       <div class="hero-grid">
         <div class="hero-content">
-          <span class="hero-tag">Focus Botanical System</span>
-          <h1>Quiet Focus Daily System</h1>
+          <span class="hero-tag">Focus Library &amp; Guide Directory</span>
+          <h1>ADHD Focus &amp; Productivity Science Without the Guilt</h1>
           <p class="subtitle">
-            Overcome task freeze and manage cognitive exhaustion using a dopamine-friendly, undated hybrid organizer and science-backed stacks.
+            Honest, science-backed protocols to manage executive dysfunction, bypass task paralysis, and build low-stress momentum.
           </p>
           
           <div class="cta-container">
-            <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="cta-button">Get the Focus Bundle</a>
-            <div class="hero-price">
-              <span class="hero-price-strike">$97</span>
-              <span>$47 USD</span>
-            </div>
+            <a href="#problems" class="cta-button">Explore the Library</a>
+            <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" style="margin-left: 1.5rem; font-weight: 700; color: var(--color-primary); text-decoration: underline; font-size: 1.05rem;">Get the Focus Bundle ($47)</a>
           </div>
           
-          <div class="guarantee-tag">
-            <span class="guarantee-icon">
-              <!-- Inline Check Icon -->
-              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            </span>
-            <span>Stripe Secure Payment &amp; Instant Digital Access</span>
+          <div class="hero-tagline" style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 1rem; font-weight: 500;">
+            ✓ Neuro-affirming. ✓ Clinically backed. ✓ Shame-free.
           </div>
         </div>
 
@@ -1259,198 +1558,292 @@
           </div>
         </div>
       </div>
-
-      <!-- Trust Bar -->
-      <div class="trust-bar">
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <span>100% Neuro-affirming Layouts</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <span>Clinically Backed Supplement Stack</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-icon">
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <span>Lifetime Updates Included</span>
-        </div>
-      </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="problem-section">
-      <div class="section-container">
-        <div class="section-title-center">
-          <h2>Why Traditional Systems Fail Your ADHD Brain</h2>
-        </div>
-        
-        <div class="problem-grid">
-          <div class="problem-text">
-            <p>
-              Most productivity systems are designed for neurotypical brains. They assume you can force focus with rigid hours, strict calendar dates, and constant willpower.
-            </p>
-            <p>
-              For a brain with lower dopamine baseline, starting a routine task feels like a stress response. Your prefrontal cortex fails to register the future reward, your amygdala triggers a survival freeze, and you lock up.
-            </p>
-            <div class="problem-quote">
-              “The shame loop starts when you miss a day, stare at empty pages, and throw the planner in the drawer.”
-            </div>
-          </div>
-          
-          <div class="problem-card">
-            <h3>The Graveyard of Planners</h3>
-            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <li>
-                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                Rigid structures that trigger starting friction
-              </li>
-              <li>
-                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                White page guilt when you skip a week
-              </li>
-              <li>
-                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                Lack of clear visual starting protocols
-              </li>
-              <li>
-                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E53E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                Complex setups that take hours to build
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bento Solution Grid -->
-    <section id="features" class="section-container">
+    <!-- Section 1: Choose the ADHD focus problem you are solving now -->
+    <section id="problems" class="section-container" style="border-top: 1px solid var(--color-border); padding-top: 5rem;">
       <div class="section-title-center">
-        <h2>The Wellenzo Focus Bundle</h2>
-        <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">Four integrated pillars designed to act as your focus architecture.</p>
+        <h2>Choose the ADHD focus problem you are solving now.</h2>
+        <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">Select your core daily friction to explore targeted resources.</p>
       </div>
-
-      <div class="bento-grid">
-        <!-- 60-Page Playbook -->
-        <div class="bento-card bento-card-full bento-card-horizontal">
-          <div class="bento-info">
-            <span class="bento-tag">Pillar 1</span>
-            <h3>The 60-Page Quiet Focus Playbook</h3>
-            <p>A science-backed, neuro-affirming guide outlining executive dysfunction, biological resets, and workplace routines.</p>
-            <div class="bento-details">
-              <ul>
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Understand the chemistry behind your task paralysis and freeze states.
-                </li>
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Region-neutral support strategies and clinical assessment preparation.
-                </li>
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Step-by-step frameworks to restructure your workspace for high focus.
-                </li>
-              </ul>
-            </div>
+      
+      <div class="problem-selection-grid">
+        <div class="problem-selection-card">
+          <div>
+            <span class="problem-card-badge">Initiation</span>
+            <h3 style="margin-top: 0.75rem;">Task Initiation &amp; Freeze</h3>
+            <p style="margin-top: 0.5rem;">Staring at a blank screen or task list for hours, feeling physically unable to start boring work.</p>
           </div>
-          <div class="bento-image-container">
-            <img class="bento-image" src="ebook%20en/assets/chaos_to_focus.png" alt="Playbook Chaos to Focus illustration" width="600" height="400" loading="lazy" />
+          <a href="#dopamine-sandbox" class="problem-card-link">Try Dopamine Appetizers →</a>
+        </div>
+        <div class="problem-selection-card">
+          <div>
+            <span class="problem-card-badge">Planning</span>
+            <h3 style="margin-top: 0.75rem;">Empty Page Guilt</h3>
+            <p style="margin-top: 0.5rem;">Abandoning traditional dated planners after skipping a few days because the empty spaces trigger shame.</p>
+          </div>
+          <a href="#guides" class="problem-card-link">View Undated Solutions →</a>
+        </div>
+        <div class="problem-selection-card">
+          <div>
+            <span class="problem-card-badge">Time</span>
+            <h3 style="margin-top: 0.75rem;">Time Blindness</h3>
+            <p style="margin-top: 0.5rem;">Losing track of hours or miscalculating how long tasks take, leading to sudden panic and burnout.</p>
+          </div>
+          <a href="#tools" class="problem-card-link">Explore Time Frameworks →</a>
+        </div>
+        <div class="problem-selection-card">
+          <div>
+            <span class="problem-card-badge">Focus</span>
+            <h3 style="margin-top: 0.75rem;">Executive Dysfunction</h3>
+            <p style="margin-top: 0.5rem;">Struggling to prioritize a massive list of tasks, filter out sensory distractions, and choose where to start.</p>
+          </div>
+          <a href="#guides" class="problem-card-link">Read Science Guides →</a>
+        </div>
+        <div class="problem-selection-card">
+          <div>
+            <span class="problem-card-badge">Energy</span>
+            <h3 style="margin-top: 0.75rem;">Cognitive Fatigue</h3>
+            <p style="margin-top: 0.5rem;">Feeling mentally exhausted by mid-day, crashing, and losing all momentum for your creative projects.</p>
+          </div>
+          <a href="#tools" class="problem-card-link">See Supplement Science →</a>
+        </div>
+        <div class="problem-selection-card">
+          <div>
+            <span class="problem-card-badge">Workspace</span>
+            <h3 style="margin-top: 0.75rem;">Workspace Clutter</h3>
+            <p style="margin-top: 0.5rem;">Having a disorganized physical desk or cluttered digital desktop that constantly scatters your attention.</p>
+          </div>
+          <a href="#guides" class="problem-card-link">Read Workspace Rules →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Start with the guides that make every next step easier -->
+    <section id="features" class="section-container" style="border-top: 1px solid var(--color-border); padding-top: 5rem;">
+      <div class="section-title-center">
+        <h2>Start with the guides that make every next step easier.</h2>
+        <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">Core educational resources designed to build stable focus.</p>
+      </div>
+      
+      <div class="guides-row">
+        <div class="guide-row-card">
+          <div class="guide-card-image-wrapper">
+            <img src="ebook%20en/assets/chaos_to_focus.png" alt="Playbook Chaos to Focus illustration" width="300" height="200" loading="lazy" />
+          </div>
+          <div class="guide-card-content">
+            <span class="guide-card-tag">Pillar 1 • Playbook</span>
+            <h3>The Quiet Focus Playbook</h3>
+            <p>A science-backed, neuro-affirming guide outlining executive dysfunction, biological resets, and workspace routines.</p>
           </div>
         </div>
-
-        <!-- Planner -->
-        <div class="bento-card">
-          <div class="bento-info">
-            <span class="bento-tag">Pillar 2</span>
-            <h3>Interactive Daily Planner</h3>
+        <div class="guide-row-card">
+          <div class="guide-card-image-wrapper">
+            <img src="ebook%20en/assets/calm_workspace.png" alt="Daily Planner dashboard view" width="300" height="200" loading="lazy" />
+          </div>
+          <div class="guide-card-content">
+            <span class="guide-card-tag">Pillar 2 • Daily System</span>
+            <h3>The Interactive Daily Planner</h3>
             <p>An undated daily hyperlinked planner designed to plan around your energy baseline, not strict calendar dates.</p>
-            <div class="bento-details">
-              <ul style="margin-bottom: 1.5rem;">
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Zero empty page guilt: miss a week, flip the page, start fresh.
-                </li>
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Hyperlinked design optimized for iPad, tablets, or reMarkable.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="bento-image-container">
-            <img class="bento-image" src="ebook%20en/assets/calm_workspace.png" alt="Daily Planner dashboard view" width="600" height="400" loading="lazy" />
           </div>
         </div>
-
-        <!-- Notion Dashboard -->
-        <div class="bento-card">
-          <div class="bento-info">
-            <span class="bento-tag">Pillar 3</span>
+        <div class="guide-row-card">
+          <div class="guide-card-image-wrapper">
+            <img src="ebook%20en/assets/dopamine_diner.png" alt="Notion Dopamine Menu illustration" width="300" height="200" loading="lazy" />
+          </div>
+          <div class="guide-card-content">
+            <span class="guide-card-tag">Pillar 3 • Workspace</span>
             <h3>Focus Notion Dashboard</h3>
             <p>A digital workspace featuring a quick-capture inbox, project manager, and digital Dopamine Menu.</p>
-            <div class="bento-details">
-              <ul style="margin-bottom: 1.5rem;">
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Mobile-friendly layout with widget compatibility.
-                </li>
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Capture ideas in 3 seconds to avoid memory load.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="bento-image-container">
-            <img class="bento-image" src="ebook%20en/assets/dopamine_diner.png" alt="Notion Dopamine Menu illustration" width="600" height="400" loading="lazy" />
-          </div>
-        </div>
-
-        <!-- Audiobook -->
-        <div class="bento-card bento-card-full bento-card-horizontal">
-          <div class="bento-info">
-            <span class="bento-tag">Pillar 4</span>
-            <h3>Bite-Sized AI Audiobook</h3>
-            <p>The entire playbook narrated in bite-sized, high-quality audio tracks for active, auditory learning.</p>
-            <div class="bento-details">
-              <ul>
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Listen on the move to reset your system during chores.
-                </li>
-                <li>
-                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Bite-sized tracks structured for short cognitive retention intervals.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="bento-image-container">
-            <img class="bento-image" src="ebook%20en/assets/botanical_science.png" alt="Audiobook Botanical Science preview" width="600" height="400" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Dopamine Menu Builder Section -->
-    <section class="section-container" style="padding-top: 0; padding-bottom: 4rem;">
+    <!-- Section 3: Reference bookshelf worth studying -->
+    <section class="shelf-section" style="background: var(--color-primary); color: #FFFFFF; padding: 5rem 1.5rem; text-align: center; position: relative; overflow: hidden; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="section-title-center" style="max-width: 600px; margin-bottom: 3rem; margin-left: auto; margin-right: auto;">
+        <h2 style="color: #FFFFFF; font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem;">Reference books worth studying for neurodivergent focus.</h2>
+        <p style="color: rgba(255,255,255,0.7); margin-top: 0.5rem;">The curated reference library included in the Wellenzo Focus Bundle.</p>
+      </div>
+      
+      <div class="shelf-row">
+        <div class="shelf-book">
+          <div class="shelf-book-cover" style="background: linear-gradient(135deg, #10B981 0%, #065F46 100%);">
+            <div style="font-size: 0.55rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FFFFFF; margin-bottom: 0.5rem; font-family: 'Outfit';">Wellenzo</div>
+            <div style="font-size: 1rem; font-weight: 800; line-height: 1.1; color: #FFFFFF; margin-bottom: 0.25rem; font-family: 'Outfit';">Quiet Focus</div>
+            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7); font-family: 'Outfit';">The Playbook</div>
+          </div>
+          <div class="shelf-book-title">Quiet Focus Playbook</div>
+        </div>
+        <div class="shelf-book">
+          <div class="shelf-book-cover" style="background: linear-gradient(135deg, #3B82F6 0%, #1E3A8A 100%);">
+            <div style="font-size: 0.55rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FFFFFF; margin-bottom: 0.5rem; font-family: 'Outfit';">Wellenzo</div>
+            <div style="font-size: 1rem; font-weight: 800; line-height: 1.1; color: #FFFFFF; margin-bottom: 0.25rem; font-family: 'Outfit';">Daily Planner</div>
+            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7); font-family: 'Outfit';">Undated Sheets</div>
+          </div>
+          <div class="shelf-book-title">Undated Daily Planner</div>
+        </div>
+        <div class="shelf-book">
+          <div class="shelf-book-cover" style="background: linear-gradient(135deg, #8B5CF6 0%, #4C1D95 100%);">
+            <div style="font-size: 0.55rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FFFFFF; margin-bottom: 0.5rem; font-family: 'Outfit';">Wellenzo</div>
+            <div style="font-size: 1rem; font-weight: 800; line-height: 1.1; color: #FFFFFF; margin-bottom: 0.25rem; font-family: 'Outfit';">Focus Notion</div>
+            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7); font-family: 'Outfit';">Workspace</div>
+          </div>
+          <div class="shelf-book-title">Notion Dashboard</div>
+        </div>
+        <div class="shelf-book">
+          <div class="shelf-book-cover" style="background: linear-gradient(135deg, #EC4899 0%, #9D174D 100%);">
+            <div style="font-size: 0.55rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FFFFFF; margin-bottom: 0.5rem; font-family: 'Outfit';">Wellenzo</div>
+            <div style="font-size: 1rem; font-weight: 800; line-height: 1.1; color: #FFFFFF; margin-bottom: 0.25rem; font-family: 'Outfit';">Audio Companion</div>
+            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7); font-family: 'Outfit';">Audiobook</div>
+          </div>
+          <div class="shelf-book-title">Bite-Sized Audiobook</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Tools, templates, and comparisons for real focus -->
+    <section id="tools" class="section-container" style="border-top: 1px solid var(--color-border); padding-top: 5rem;">
+      <div class="section-title-center">
+        <h2>Tools, templates, and frameworks for real focus.</h2>
+        <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">An integrated neurodivergent workspace framework to get work done.</p>
+      </div>
+      
+      <div class="tools-grid">
+        <div class="tool-grid-card">
+          <span class="tool-card-icon" aria-hidden="true">📁</span>
+          <h3>Interactive Daily Planner</h3>
+          <p>Dopamine-friendly undated daily planner files optimized for tablets (iPad, reMarkable) or standard print.</p>
+        </div>
+        <div class="tool-grid-card">
+          <span class="tool-card-icon" aria-hidden="true">⚡</span>
+          <h3>Notion Focus Workspace</h3>
+          <p>A personal dashboard with a quick-capture task inbox to instantly clear your working memory.</p>
+        </div>
+        <div class="tool-grid-card">
+          <span class="tool-card-icon" aria-hidden="true">🧪</span>
+          <h3>Neuro-affirming Stacks</h3>
+          <p>Clinical evidence, accurate dosages, and synergies of target focus supplements (L-Theanine, Caffeine).</p>
+        </div>
+        <div class="tool-grid-card">
+          <span class="tool-card-icon" aria-hidden="true">🎧</span>
+          <h3>Bite-Sized Audiobook</h3>
+          <p>High-quality, short auditory tracks of the entire playbook to listen to during light physical activity.</p>
+        </div>
+        <div class="tool-grid-card">
+          <span class="tool-card-icon" aria-hidden="true">🎨</span>
+          <h3>Dopamine Menu Sandbox</h3>
+          <p>A physical and digital checklist of low-friction starter tasks to trigger transition focus.</p>
+        </div>
+        <div class="tool-grid-card">
+          <span class="tool-card-icon" aria-hidden="true">🔄</span>
+          <h3>Lifetime Free Updates</h3>
+          <p>Instant access to all future workbook iterations, Notion dashboards, and planning sheet releases.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Split section: Before you add another task, know what can waste your time -->
+    <section class="split-avoid-section" style="background: var(--color-primary); color: #FFFFFF; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="section-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; padding-top: 5rem; padding-bottom: 5rem;">
+        <div class="split-left-card" style="padding: 2rem 0;">
+          <h2 style="color: #FFFFFF; font-size: 2.4rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 1.5rem;">Before you add another tactic, know what can waste your time.</h2>
+          <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+            Traditional calendars and rigid micro-scheduling assume consistent daily energy. Trying to force an ADHD brain to follow them often leads directly to task freeze.
+          </p>
+        </div>
+        <div class="split-right-accordions" style="display: flex; flex-direction: column; gap: 1rem;">
+          <details style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: #FFFFFF;">
+            <summary style="color: #FFFFFF;">
+              <span>1. Strict hour-by-hour calendars</span>
+              <svg aria-hidden="true" class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #10B981;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </summary>
+            <p style="color: rgba(255,255,255,0.7); margin-top: 1rem;">
+              ADHD brains experience fluctuating daily dopamine levels. Attempting to schedule every 30-minute block causes immediate friction and starting anxiety when a single task runs over.
+            </p>
+          </details>
+          <details style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: #FFFFFF;">
+            <summary style="color: #FFFFFF;">
+              <span>2. Empty page planning guilt</span>
+              <svg aria-hidden="true" class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #10B981;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </summary>
+            <p style="color: rgba(255,255,255,0.7); margin-top: 1rem;">
+              Dated calendars record your inconsistencies. When you take a three-day break, returning to blank dated pages triggers a shame spiral, leading you to abandon the planner.
+            </p>
+          </details>
+          <details style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); color: #FFFFFF;">
+            <summary style="color: #FFFFFF;">
+              <span>3. Monolithic to-do lists</span>
+              <svg aria-hidden="true" class="faq-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #10B981;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </summary>
+            <p style="color: rgba(255,255,255,0.7); margin-top: 1rem;">
+              Listing tasks linearly without grouping them by cognitive weight overwhelms the prefrontal cortex, triggering amygdala flight response and executive freeze.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: New practical notes from the Wellenzo science library. -->
+    <section class="section-container" style="border-top: 1px solid var(--color-border); padding-top: 5rem;">
+      <div class="section-title-center">
+        <h2>New practical notes from the Wellenzo library.</h2>
+        <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">Explore our latest clinical and neuro-affirming focus guides.</p>
+      </div>
+      
+      <div class="notes-grid">
+        <article class="note-card">
+          <div class="note-card-meta">Organization • 6 Min Read</div>
+          <h3 style="margin-top: 0.5rem;"><a href="blog/why-dated-planners-fail-adhd-adults.html" style="color: var(--color-primary); text-decoration: none;">Why Dated Planners Fail ADHD Adults (And the Undated Solution)</a></h3>
+          <p style="margin-top: 0.5rem; flex-grow: 1;">Traditional calendars assume you have a consistent energy baseline. When executive dysfunction hits, skipping a week leaves you with a graveyard of empty pages that trigger intense planning shame. Here is the biology behind it.</p>
+          <a href="blog/why-dated-planners-fail-adhd-adults.html" class="note-card-link">Read Guide →</a>
+        </article>
+        <article class="note-card muted">
+          <div class="note-card-meta">Initiation • Coming Soon</div>
+          <h3 style="margin-top: 0.5rem; color: var(--color-text-muted);">5 Dopamine Appetizers to Initiate Boring Work Instantly</h3>
+          <p style="margin-top: 0.5rem; flex-grow: 1;">How to bypass starting anxiety by curating a menu of low-effort, high-reward tasks to boot up your prefrontal cortex.</p>
+        </article>
+        <article class="note-card muted">
+          <div class="note-card-meta">Supplements • Coming Soon</div>
+          <h3 style="margin-top: 0.5rem; color: var(--color-text-muted);">L-Theanine &amp; Caffeine: The Ultimate Synergy for Calm Alertness</h3>
+          <p style="margin-top: 0.5rem; flex-grow: 1;">An analysis of peer-reviewed clinical studies detailing the exact dosages and mechanisms behind the ultimate calm focus stack.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 7: Full-Width Path Callout -->
+    <section class="section-container" style="padding-top: 2rem;">
+      <div class="start-here-callout" style="background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 3rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; box-shadow: var(--shadow-md);">
+        <div style="max-width: 600px; text-align: left;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); display: block; margin-bottom: 0.5rem;">Start-Here Path</span>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.5rem; letter-spacing: -0.02em;">Use the start-here path before you collect more advice.</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.95rem;">Access the complete Wellenzo Focus Bundle for $47 USD with secure Stripe checkout, lifetime updates, and 30-day money-back guarantee.</p>
+        </div>
+        <div>
+          <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="cta-button" style="white-space: nowrap;">Access the Focus Bundle</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: A clearer way to build focus without shame or burnout (Dopamine Menu Sandbox) -->
+    <section id="dopamine-sandbox" class="section-container" style="border-top: 1px solid var(--color-border); padding-top: 5rem; padding-bottom: 5rem;">
+      <div class="section-title-center" style="margin-bottom: 3rem;">
+        <h2>A clearer way to build focus without shame or burnout.</h2>
+        <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">Test our interactive Dopamine Menu starter sandbox to bypass task transition friction.</p>
+      </div>
+
       <div class="dopamine-builder-card">
-        <div class="dopamine-builder-header">
+        <div class="dopamine-builder-header" style="text-align: left;">
           <span class="bento-tag">Interactive Sandbox</span>
-          <h2>Build Your ADHD Dopamine Menu</h2>
+          <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--color-primary); margin-top: 0.5rem; margin-bottom: 0.5rem;">Build Your ADHD Dopamine Menu</h3>
           <p>
             Standard to-do lists trigger starting anxiety because they feel like orders. A <strong>Dopamine Menu</strong> (or “Dopamenu”) categorizes tasks by effort and reward, allowing you to choose a friction-free starter to boot up your prefrontal cortex. Try styling your menu below:
           </p>
         </div>
         
         <div class="dopamine-grid">
-          <div class="dopamine-choices">
+          <div class="dopamine-choices" style="text-align: left;">
             <!-- Starters -->
             <div class="dopamine-group">
               <h4>Starters <span class="dopamine-group-desc">Appetizers (5 mins to initiate system)</span></h4>
@@ -1525,39 +1918,6 @@
                 <p>Included in the Interactive Notion Dashboard & Planner templates.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Block -->
-    <section id="pricing" class="section-container" style="padding-top: 0;">
-      <div class="pricing-card">
-        <div class="pricing-badge">50% OFF</div>
-        <h2>Get the Quiet Focus Bundle Today</h2>
-        <p class="intro">
-          Build a daily system that works with your biology, quiets starting anxiety, and lets you focus shame-free.
-        </p>
-        
-        <div class="price-large">
-          <span class="price-strike">$97</span>
-          <span>$47 USD</span>
-        </div>
-        
-        <a href="https://checkout.stripe.com/pay/wellenzo_focus_bundle" class="cta-button">Instant Access to the Bundle</a>
-        
-        <div class="pricing-meta">
-          <div class="pricing-meta-item">
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>30-Day Money Back Guarantee</span>
-          </div>
-          <div class="pricing-meta-item">
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Secure Checkout via Stripe</span>
-          </div>
-          <div class="pricing-meta-item">
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Lifetime Free Updates</span>
           </div>
         </div>
       </div>
