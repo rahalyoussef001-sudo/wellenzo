@@ -15,7 +15,7 @@
 - **Nom** : Wellenzo ADHD Focus Bundle (Premium Hybrid Pack)
 - **Type** : Ebook, Audiobook & Planner Bundle
 - **Prix** : 47$ USD
-- **URL de vente** : À définir (Stripe Checkout)
+- **URL de vente** : https://buy.stripe.com/eVqcN64or7Ag6WS9kc6Zy01 (Stripe Checkout)
 - **Proposition de valeur** : Dopamine-friendly organization, science-backed guidance, and clinical neuro-hacking stack to help ADHD adults unlock focus without shame.
 
 ## Autres Produits

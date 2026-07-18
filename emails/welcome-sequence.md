@@ -5,7 +5,7 @@ This welcome sequence is triggered automatically when a new subscriber signs up 
 - **From Name**: Alex | Wellenzo
 - **From Email**: info@wellenzo.com
 - **Format**: Plain Text (for maximum deliverability, low visual noise, and ADHD-friendly readability)
-- **Target URL**: `{{STRIPE_CHECKOUT_URL}}` (Wellenzo ADHD Focus Bundle — $47 USD) - *Configure this link in Poetmail*
+- **Target URL**: `https://buy.stripe.com/eVqcN64or7Ag6WS9kc6Zy01` (Wellenzo ADHD Focus Bundle — $47 USD) - *Configure this link in Poetmail*
 
 ---
 
@@ -151,7 +151,7 @@ You get:
 - The AI-Narrated Audiobook (bite-sized tracks for listening on the go).
 
 👉 **Check out the ADHD Focus Bundle here ($47 USD)**:
-{{STRIPE_CHECKOUT_URL}}
+https://buy.stripe.com/eVqcN64or7Ag6WS9kc6Zy01
 
 It is designed to be the last planner system you will ever buy—because it is built to survive your off-weeks.
 
@@ -206,7 +206,7 @@ No placebos. No marketing fluff. Just peer-reviewed science.
 The supplement guide is just one chapter of the 60-page playbook included in the **Wellenzo ADHD Focus Bundle**.
 
 👉 **Unlock the complete science-backed playbook & planner pack**:
-{{STRIPE_CHECKOUT_URL}}
+https://buy.stripe.com/eVqcN64or7Ag6WS9kc6Zy01
 
 Build a daily system that aligns with your biology.
 
@@ -260,7 +260,7 @@ It is a complete, integrated system designed to support your executive functions
 If you are ready to transition from constant firefighting to a calm, structured, and sustainable daily focus, this is your next step.
 
 👉 **Get lifetime access to the ADHD Focus Bundle for $47 USD**:
-{{STRIPE_CHECKOUT_URL}}
+https://buy.stripe.com/eVqcN64or7Ag6WS9kc6Zy01
 
 Build a system that works with your brain, not against it.
 
