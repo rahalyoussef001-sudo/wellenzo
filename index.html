@@ -49,11 +49,51 @@
 
     body {
       font-family: 'Outfit', system-ui, -apple-system, sans-serif;
-      background: var(--color-bg);
+      background-color: var(--color-bg);
+      background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+      background-size: 24px 24px;
       color: var(--color-text);
       line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* Ambient Glow Spots */
+    .ambient-glow-1 {
+      position: absolute;
+      top: 5%;
+      left: 10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .ambient-glow-2 {
+      position: absolute;
+      top: 45%;
+      right: 5%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(100px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .ambient-glow-3 {
+      position: absolute;
+      top: 80%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(120px);
+      z-index: -1;
+      pointer-events: none;
     }
 
     /* --- Common Layout Components --- */
@@ -61,13 +101,14 @@
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 5rem 1.5rem;
+      position: relative;
     }
 
     header {
       border-bottom: 1px solid var(--color-border);
-      background: rgba(245, 242, 235, 0.8);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(245, 242, 235, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -733,6 +774,190 @@
       line-height: 1.6;
     }
 
+    /* --- Dopamine Menu Builder Widget --- */
+    .dopamine-builder-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .dopamine-builder-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(16, 185, 129, 0.2);
+    }
+    
+    .dopamine-builder-header {
+      margin-bottom: 2.5rem;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .dopamine-builder-header h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    
+    .dopamine-builder-header p {
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+    
+    .dopamine-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    
+    .dopamine-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .dopamine-group h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    
+    .dopamine-group-desc {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      font-weight: 400;
+    }
+    
+    .dopamine-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .dopamine-opt {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .dopamine-opt:hover {
+      border-color: var(--color-accent);
+      background: var(--color-card-bg);
+      color: var(--color-primary);
+    }
+    
+    .dopamine-opt.active {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    }
+    
+    .dopamine-preview {
+      position: sticky;
+      top: 120px;
+    }
+    
+    .dopamine-menu-board {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+    }
+    
+    .menu-board-header {
+      text-align: center;
+      border-bottom: 1px dashed rgba(255,255,255,0.15);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .menu-board-header h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    
+    .menu-board-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+    
+    .menu-board-section {
+      margin-bottom: 1.25rem;
+    }
+    
+    .menu-board-section h5 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+    
+    .menu-board-item {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      min-height: 24px;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+    
+    .menu-board-item.empty-item {
+      color: rgba(255, 255, 255, 0.35);
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    .menu-board-footer {
+      text-align: center;
+      border-top: 1px dashed rgba(255,255,255,0.15);
+      padding-top: 1rem;
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .dopamine-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .dopamine-preview {
+        position: static;
+      }
+      .dopamine-builder-card {
+        padding: 1.5rem;
+      }
+    }
+
     /* --- Footer --- */
     footer {
       border-top: 1px solid var(--color-border);
@@ -884,6 +1109,9 @@
   </style>
 </head>
 <body>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-glow-3"></div>
 
   <!-- Header -->
   <header>
@@ -1135,6 +1363,98 @@
       </div>
     </section>
 
+    <!-- Dopamine Menu Builder Section -->
+    <section class="section-container" style="padding-top: 0; padding-bottom: 4rem;">
+      <div class="dopamine-builder-card">
+        <div class="dopamine-builder-header">
+          <span class="bento-tag">Interactive Sandbox</span>
+          <h2>Build Your ADHD Dopamine Menu</h2>
+          <p>
+            Standard to-do lists trigger starting anxiety because they feel like orders. A <strong>Dopamine Menu</strong> (or "Dopamenu") categorizes tasks by effort and reward, allowing you to choose a friction-free starter to boot up your prefrontal cortex. Try styling your menu below:
+          </p>
+        </div>
+        
+        <div class="dopamine-grid">
+          <div class="dopamine-choices">
+            <!-- Starters -->
+            <div class="dopamine-group">
+              <h4>Starters <span class="dopamine-group-desc">Appetizers (5 mins to initiate system)</span></h4>
+              <div class="dopamine-options">
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'starter', '5-min stretch & deep breaths')">5-min stretch</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'starter', 'Drink a cold glass of water')">Drink cold water</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'starter', 'Play with pet for 3 mins')">Pet play time</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'starter', 'Listen to 1 favorite hype song')">1 Hype song</button>
+              </div>
+            </div>
+            
+            <!-- Mains -->
+            <div class="dopamine-group">
+              <h4>Mains <span class="dopamine-group-desc">Deep Focus Work (25-min sprints)</span></h4>
+              <div class="dopamine-options">
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'main', 'Write 200 words shame-free')">Write 200 words</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'main', 'Clean desk & organize workspace')">Clean workspace</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'main', 'Outline next project milestone')">Project outline</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'main', '1 Pomodoro of email sprint')">Email sprint</button>
+              </div>
+            </div>
+            
+            <!-- Sides -->
+            <div class="dopamine-group">
+              <h4>Sides <span class="dopamine-group-desc">Passive Stimulation (Quiet background)</span></h4>
+              <div class="dopamine-options">
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'side', 'Lo-fi focus beats in background')">Lo-fi beats</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'side', 'Diffuse mint essential oils')">Essential oil</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'side', 'Sit next to natural sunlight')">Natural window light</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'side', 'Warm cup of matcha green tea')">Matcha tea</button>
+              </div>
+            </div>
+            
+            <!-- Desserts -->
+            <div class="dopamine-group">
+              <h4>Desserts <span class="dopamine-group-desc">Recharges (15-min planned rewards)</span></h4>
+              <div class="dopamine-options">
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'dessert', '15-min cozy game break')">15-min game break</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'dessert', 'Browse favorite art/design book')">Read comic/book</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'dessert', 'Walk outside around the block')">Walk outside</button>
+                <button class="dopamine-opt" onclick="toggleDopamine(this, 'dessert', 'Eat a high-protein focus snack')">High-protein snack</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Visual Menu Board -->
+          <div class="dopamine-preview">
+            <div class="dopamine-menu-board">
+              <div class="menu-board-header">
+                <h3>My Dopamine Menu</h3>
+                <span class="menu-board-sub">Wellenzo Daily System</span>
+              </div>
+              <div class="menu-board-body">
+                <div class="menu-board-section">
+                  <h5>Starters</h5>
+                  <div id="board-starter" class="menu-board-item empty-item">Click options to add</div>
+                </div>
+                <div class="menu-board-section">
+                  <h5>Mains</h5>
+                  <div id="board-main" class="menu-board-item empty-item">Click options to add</div>
+                </div>
+                <div class="menu-board-section">
+                  <h5>Sides</h5>
+                  <div id="board-side" class="menu-board-item empty-item">Click options to add</div>
+                </div>
+                <div class="menu-board-section">
+                  <h5>Desserts</h5>
+                  <div id="board-dessert" class="menu-board-item empty-item">Click options to add</div>
+                </div>
+              </div>
+              <div class="menu-board-footer">
+                <p>Included in the Interactive Notion Dashboard & Planner templates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Pricing Block -->
     <section class="section-container" style="padding-top: 0;">
       <div class="pricing-card">
@@ -1273,6 +1593,58 @@
       if (event.target.classList.contains('modal')) {
         event.target.style.display = 'none';
         document.body.style.overflow = 'auto';
+      }
+    }
+
+    // 3D Tilting Book Cover Mockup Mouse Tracking
+    const heroScene = document.querySelector('.hero-scene');
+    const book = document.querySelector('.book');
+
+    if (heroScene && book) {
+      heroScene.addEventListener('mousemove', (e) => {
+        const rect = heroScene.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const xc = rect.width / 2;
+        const yc = rect.height / 2;
+        const dx = x - xc;
+        const dy = y - yc;
+        
+        // Calculate rotation angles (max 15deg tilt)
+        const tiltX = -(dy / yc) * 12;
+        const tiltY = (dx / xc) * 18;
+
+        book.style.transform = `rotateY(${tiltY - 20}deg) rotateX(${tiltX + 10}deg) scale(1.03)`;
+      });
+
+      heroScene.addEventListener('mouseleave', () => {
+        book.style.transform = `rotateY(-20deg) rotateX(10deg) scale(1)`;
+      });
+    }
+
+    // Dopamine Menu Builder Logic
+    const activeDopamineItems = {
+      starter: null,
+      main: null,
+      side: null,
+      dessert: null
+    };
+
+    function toggleDopamine(btn, type, text) {
+      const group = btn.closest('.dopamine-group');
+      const buttons = group.querySelectorAll('.dopamine-opt');
+      
+      if (btn.classList.contains('active')) {
+        btn.classList.remove('active');
+        activeDopamineItems[type] = null;
+        document.getElementById(`board-${type}`).innerText = 'Click options to add';
+        document.getElementById(`board-${type}`).classList.add('empty-item');
+      } else {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeDopamineItems[type] = text;
+        document.getElementById(`board-${type}`).innerText = text;
+        document.getElementById(`board-${type}`).classList.remove('empty-item');
       }
     }
   </script>
